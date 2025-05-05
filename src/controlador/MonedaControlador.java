@@ -25,9 +25,14 @@ public class MonedaControlador {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
 
-            return new Gson().fromJson(response.body(), Moneda.class);
+            Moneda moneda = new Gson().fromJson(response.body(), Moneda.class);
+
+            if (moneda.getConversion_rates() == null) {
+                return null;
+            }
+            return moneda;
         } catch (Exception e) {
-            throw new RuntimeException("modelo.Moneda no encontrada: " + e.getMessage());
+            return null;
         }
 
     }

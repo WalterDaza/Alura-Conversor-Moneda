@@ -1,8 +1,6 @@
-import controlador.MonedaControlador;
-import modelo.Moneda;
 import servicio.MonedaServicioImpl;
 
-import java.util.Map;
+
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +19,8 @@ public class Main {
             System.out.println("       | ------------------------------------ |");
             System.out.println("       | 1. Mostrar lista de monedas          |");
             System.out.println("       | 2. Ingresar al conversor             |");
-            System.out.println("       | 3. Salir                             |");
+            System.out.println("       | 3. Ver historial de consultas        |");
+            System.out.println("       | 4. Salir                             |");
             System.out.println("       | ------------------------------------ |");
             System.out.println("       |            Ten en cuenta             |");
             System.out.println("       | ------------------------------------ |");
@@ -58,6 +57,9 @@ public class Main {
                     System.out.println("\n -------------------------------------------------------------------");
                     break;
                 case 3:
+                    monedaServicio.historial();
+                    break;
+                case 4:
                     salir = false;
                     System.out.println("¡Gracias por utilizar el conversor de monedas!");
                     break;
