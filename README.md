@@ -7,6 +7,7 @@ Este es un proyecto de consola en Java que permite al usuario convertir entre di
 - Conversión entre monedas introduciendo siglas y cantidad.
 - Resultados formateados con dos decimales.
 - Integración con una API externa para obtener tasas de cambio.
+- Almacenamiento de historico de consultas.
 - Uso de Gson para la manipulación de datos en formato JSON.
 - Uso de Dotenv para manejar configuraciones sensibles como la clave API de la fuente de tasas de cambio.
 
